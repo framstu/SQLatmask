@@ -41,7 +41,6 @@ WHERE conditions are translated into DataFrame.query() expressions
 
 :: Project Structure
 
-Code
 ├── main.py        # CLI and command loop
 ├── cmds.py        # SQL command execution
 ├── iodata.py      # Load/save JSON tables
