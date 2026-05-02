@@ -42,11 +42,17 @@ WHERE conditions are translated into DataFrame.query() expressions
 :: Project Structure
 
 ├── main.py        # CLI and command loop
+
 ├── cmds.py        # SQL command execution
+
 ├── iodata.py      # Load/save JSON tables
+
 ├── shelp.py       # Help banner
+
 ├── TESTALL.py     # Automated tests
+
 └── mockdata/      # JSON data storage
+
 
 
 :: Getting Started
