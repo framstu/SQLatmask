@@ -1,12 +1,18 @@
 
 
-:: SQLatmask v0.1.0
+# SQLatmask v0.1.0
 
 A very lightweight SQL‑like query engine built in Python using Pandas.
 SQLatmask lets you run simplified SQL commands directly on JSON‑based tables through a command‑line interface.
 
 
-:: Features
+## SQL Query in Sway
+
+Example of executing a SQL query in a terminal within my Sway (Wayland) desktop environment:
+![SQL Query Result](img/img01.png)
+
+
+## Features
 
 - SELECT queries with column filtering
 - WHERE clause with:
@@ -20,7 +26,7 @@ SQLatmask lets you run simplified SQL commands directly on JSON‑based tables t
 - Command‑line interface (CLI)
 
 
-:: Example Queries
+## Example Queries
 
 - SELECT * FROM customers;
 
@@ -31,7 +37,7 @@ SQLatmask lets you run simplified SQL commands directly on JSON‑based tables t
 - DELETE FROM customers WHERE age < 20;
 
 
-:: How It Works
+## How It Works
 
 Tables are stored as .json files inside the mockdata/ directory (loaded at startup)
 Data is loaded into pandas DataFrames at runtime
@@ -39,23 +45,18 @@ Queries are parsed using simple string‑based logic
 WHERE conditions are translated into DataFrame.query() expressions
 
 
-:: Project Structure
+## Project Structure
 
+Code
 ├── main.py        # CLI and command loop
-
 ├── cmds.py        # SQL command execution
-
 ├── iodata.py      # Load/save JSON tables
-
 ├── shelp.py       # Help banner
-
 ├── TESTALL.py     # Automated tests
-
 └── mockdata/      # JSON data storage
 
 
-
-:: Getting Started
+## Getting Started
 
 1. Install dependencies
 'pip install pandas'
@@ -64,7 +65,7 @@ WHERE conditions are translated into DataFrame.query() expressions
 'python main.py'
 
 
-:: Example Output
+## Example Output
 
 SQL> SELECT * FROM customers WHERE age BETWEEN 24 AND 27;
 
@@ -73,7 +74,7 @@ SQL> SELECT * FROM customers WHERE age BETWEEN 24 AND 27;
  Bob    26
  
  
-:: Limitations
+## Limitations
 
 - WHERE parsing is limited and a bit risky. Unexpected input might crash 
 - No JOIN support
@@ -82,7 +83,7 @@ SQL> SELECT * FROM customers WHERE age BETWEEN 24 AND 27;
 - Values treated as strings
 
 
-:: Design Notes
+## Design Notes
 
 This project started as a simple keyword-based query experiment and quickly evolved toward a more SQL-like project.
 
@@ -94,7 +95,7 @@ Queries are sensitive to input format, and malformed or unexpected expressions c
 A more robust implementation would require a proper parsing layer and better input validation.
 
 
-:: Future Plans
+## Future Plans
 
 - Support for INSERT, UPDATE, MERGE, JOIN etc.
 - Type handling (int, float)
@@ -103,17 +104,18 @@ A more robust implementation would require a proper parsing layer and better inp
 - Update of the query validation system
 
 
-:: What I Learned
+## What I Learned
 
 - Using pandas as a query engine, although it wasn't all that necessary for other than training reasons.
 - Pandas has got fantastic documentation easily found.
 
 
-:: License
+## License
 
 MIT
 
 
-:: Author
+## Author
 
 Matias Back
+https://github.com/framstu
