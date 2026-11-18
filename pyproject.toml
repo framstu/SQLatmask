@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlatmask"
+version = "0.2.0"
+description = "Query JSON tables with a small SQL dialect built on pandas"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Matias Back" }]
+keywords = ["sql", "pandas", "json", "cli", "query-engine"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database",
+    "Topic :: Education",
+]
+dependencies = ["pandas>=1.5"]
+
+[project.scripts]
+sqlatmask = "sqlatmask.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sqlatmask*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
