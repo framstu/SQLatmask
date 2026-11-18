@@ -1,6 +1,6 @@
 import os
-import iodata
-import cmds
+from sqlatmask import iodata
+from sqlatmask import cmds
 
 # Enkel test-runner
 def run_test(name, func):
@@ -37,7 +37,7 @@ def test_select_where():
     cmds.execute_select("SELECT * FROM users WHERE age > 25")
     df = iodata.LAST_RESULT
     assert len(df) == 2
-    
+
 
 def test_select_order_by():
     cmds.execute_select("SELECT * FROM users ORDER BY age DESC")
