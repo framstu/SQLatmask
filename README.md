@@ -2,8 +2,9 @@
 
 # SQLatmask v0.1.0
 
-A very lightweight SQL‑like query engine built in Python using Pandas.
-SQLatmask lets you run simplified SQL commands directly on JSON‑based tables through a command‑line interface.
+A lightweight SQL-like query engine built in Python using Pandas.
+SQLatmask allows you to execute simplified SQL commands directly on JSON-based tables through a command-line interface (CLI).
+It can be used both as a learning tool for practicing SQL and as a lightweight solution for querying data stored in JSON files.
 
 
 ## SQL Query in Sway
